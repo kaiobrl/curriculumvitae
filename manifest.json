@@ -1,0 +1,25 @@
+{
+    "name": "Kaiobrl - Currículo",
+    "short_name": "Kaiobrl CV",
+    "description": "Currículo de Kaiobrl - Desenvolvedor Web Front-end",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#003147",
+    "theme_color": "#003147",
+    "orientation": "portrait",
+    "scope": "./",
+    "icons": [
+        {
+            "src": "./img/perfil.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/perfil.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["portfolio", "professional"],
+    "lang": "pt-BR"
+}

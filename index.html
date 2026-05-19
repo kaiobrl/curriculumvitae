@@ -4,194 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive CV HTML & CSS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Currículo de Kaiobrl - Desenvolvedor Web Frontend">
+    <meta name="author" content="Kaiobrl">
+    <meta name="theme-color" content="#003147">
+    <title>Kaiobrl | Desenvolvedor Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer-when-downgrade" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script type="application/ld+json" id="json-ld"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="left_Side">
-            <div class="profileText">
-                <div class="imgBx">
-                    <img src="./img/perfil.png">
-                    <!-- <img src="https://kaioxdev.github.io/Portifolio/src/imagens/foto-perfil1.png"> -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <button class="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <main class="cv-container">
+        <aside class="cv-sidebar" role="complementary" aria-label="Informações pessoais">
+            <header class="profile-header" id="profileHeader"></header>
+
+            <section class="sidebar-section" aria-labelledby="contact-title" id="contactSection"></section>
+            <section class="sidebar-section" aria-labelledby="education-title" id="educationSection"></section>
+            <section class="sidebar-section" aria-labelledby="languages-title" id="languagesSection"></section>
+            <section class="sidebar-section" aria-labelledby="skills-title" id="skillsSection"></section>
+        </aside>
+
+        <div class="cv-main">
+            <section class="main-section about-section" aria-labelledby="about-title" id="aboutSection"></section>
+            <section class="main-section experience-section" aria-labelledby="experience-title" id="experienceSection"></section>
+            <section class="main-section projects-section" aria-labelledby="projects-title" id="projectsSection"></section>
+            <section class="main-section radar-section" aria-labelledby="radar-title" id="radarSection"></section>
+            <section class="main-section interests-section" aria-labelledby="interests-title" id="interestsSection"></section>
+            <section class="main-section certifications-section" aria-labelledby="certs-title" id="certificationsSection"></section>
+            <section class="main-section contact-form-section" aria-labelledby="form-title" id="contactFormSection"></section>
+
+            <footer class="cv-footer">
+                <div class="footer-left">
+                    <p>© 2026 Kaiobrl. <span id="footerText"></span> <i class="fas fa-heart"></i></p>
+                    <p class="visitor-count"><i class="fas fa-eye"></i> <span id="visitorCount">0</span></p>
                 </div>
-                <h2>Kaio Gustavo<br><span>Desenvolvedor Web</span></h2>
-            </div>
-
-            <div class="contactInfo">
-                <h3 class="title">Contato</h3>
-                <ul>
-                    <li>
-                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                        <span class="text">+55 83 9.8137-4944</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                        <span class="text">formatolivre1@gmail.com</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></i></span>
-                        <span class="text">@KaioxDev</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-                        <span class="text">@kaioxdev</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <span class="text">João Pessoa, PB, Brasil.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="contactInfo education">
-                <h3 class="title">Educação</h3>
-                <ul>
-                    <li>
-                        <h5>16/02/2011</h5>
-                        <h4>Ensino Medio</h4>
-                        <h4>E.E.E.F.M Cônego Francisco Gomes de Lima</h4>
-                    </li>
-                    <li>
-                        <h5>08/01/2015</h5>
-                        <h4>Ensino Profissionalizante</h4>
-                        <h4>Técnico de Apoio ao Usuário de Informática </h4>
-                    </li>
-                    <li>
-                        <h5>06/01/2016</h5>
-                        <h4>Ensino Técnico</h4>
-                        <h4>Técnico e Suporte em Informática</h4>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="contactInfo language">
-                <h3 class="title">Idiomas</h3>
-                <ul>
-                    <li>
-                        <span class="text">Portugues</span>
-                        <span class="percent">
-                            <div style="width: 90%;"></div>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="text">Ingles</span>
-                        <span class="percent">
-                            <div style="width: 70%;"></div>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="text">outro</span>
-                        <span class="percent">
-                            <div style="width: 24%;"></div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
+                <div class="footer-right">
+                    <div class="lang-switch">
+                        <button data-lang="pt" class="lang-btn active" aria-label="Português">PT</button>
+                        <button data-lang="en" class="lang-btn" aria-label="English">EN</button>
+                    </div>
+                    <button class="share-btn" aria-label="Compartilhar" title="Compartilhar">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </footer>
         </div>
+    </main>
 
-        <div class="right_Side">
-            <div class="about">
-                <h2 class="title2">Sobre</h2>
-                <p>Olá! Sou Kaio Gustavo
-                    Um desenvolvedor frontend em formação apaixonado por tecnologia.<br><br>Estou sempre me desafiando
-                    com novos projetos e buscando feedback na comunidade de programação, além de compartilhar meus
-                    conhecimentos. 😁 <br><br>Ah, também sou fã de jogos, filmes, séries e animes. 💜</p>
-            </div>
-            <!-- Adicione uma div para cada experiência profissional -->
-            <div class="about">
-                <h2 class="title2">Experiência</h2>
-                <!-- Primeira experiência -->
-                <div class="box">
-                    <div class="year_company">
-                        <h5>Mai 2011 - Ago 2011</h5>
-                        <h5>Periodo</h5>
-                    </div>
-                    <div class="text">
-                        <h4>CARREFOUR COMERCIO E INDUSTRIA LTDA - Bessa</h4>
-                        <p>Empacotador</p>
-                    </div>
-                </div>
-                <!-- Segunda experiência -->
-                <div class="box">
-                    <div class="year_company">
-                        <h5>Abr 2013 - Jul 2013</h5>
-                        <h5>Periodo</h5>
-                    </div>
-                    <div class="text">
-                        <h4>On line Prestadora de Serviços LTDA - Bessa</h4>
-                        <p>Auxiliar de produção | São Braz</p>
-                    </div>
-                </div>
-                <!-- Terceira experiência -->
-                <div class="box">
-                    <div class="year_company">
-                        <h5>Out 2019 - Ago 2024</h5>
-                        <h5>Periodo</h5>
-                    </div>
-                    <div class="text">
-                        <h4>A tradicional tapioca do Lula - Geisel</h4>
-                        <p>Serviços gerais</p>
-                    </div>
-                </div>
-            </div>
+    <div class="toast-container" id="toastContainer"></div>
 
-            <div class="about skills">
-                <h2 class="title2">Professional Skills</h2>
-                <div class="box">
-                    <h4>Github</h4>
-                    <div class="percent">
-                        <div style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h4>Html</h4>
-                    <div class="percent">
-                        <div style="width: 92%;"></div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h4>Css</h4>
-                    <div class="percent">
-                        <div style="width: 89%;"></div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h4>Javascript</h4>
-                    <div class="percent">
-                        <div style="width: 76%;"></div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h4>NodeJs</h4>
-                    <div class="percent">
-                        <div style="width: 50%;"></div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h4>Typescript</h4>
-                    <div class="percent">
-                        <div style="width: 46%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about interest">
-                <h2 class="title2">Interesse</h2>
-                <ul>
-                    <li><i class="fa fa-gamepad" aria-hidden="true"></i> Jogos</li>
-                    <li><i class="fa fa-desktop" aria-hidden="true"></i> programar</li>
-                    <li><i class="fa fa-book" aria-hidden="true"></i> Leitura</li>
-                    <li><i class="fa fa-cutlery" aria-hidden="true"></i> Culinária</li>
-                </ul>
-            </div>
-
-        </div>
-
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
