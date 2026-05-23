@@ -34,7 +34,6 @@
             this.renderAbout();
             this.renderExperience();
             this.renderProjects();
-            this.renderRadarChart();
             this.renderInterests();
             this.renderCertifications();
             this.renderContactForm();
@@ -150,91 +149,6 @@
                     </div>`).join('')}</div>
                 <div class="github-repos" id="githubRepos"></div>`;
             document.getElementById('projectsSection').innerHTML = html;
-        },
-
-        renderRadarChart() {
-            const html = `<div class="section-header"><h2 class="main-section-title"><span class="title-icon"><i class="fas fa-chart-radar"></i></span> Skills</h2></div>
-                <div class="radar-wrapper"><canvas id="radarChart" width="350" height="350"></canvas></div>`;
-            document.getElementById('radarSection').innerHTML = html;
-            setTimeout(() => this.drawRadarChart(), 100);
-        },
-
-        drawRadarChart() {
-            const canvas = document.getElementById('radarChart');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            const w = canvas.width = 350, h = canvas.height = 350;
-            const cx = w / 2, cy = h / 2, r = 130;
-            const skills = CV.skills.slice(0, 7);
-            const n = skills.length;
-            const angleStep = (Math.PI * 2) / n;
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
-            const textColor = isDark ? '#dfe6e9' : '#636e72';
-
-            ctx.clearRect(0, 0, w, h);
-
-            for (let level = 1; level <= 4; level++) {
-                ctx.beginPath();
-                const lr = (r / 4) * level;
-                for (let i = 0; i <= n; i++) {
-                    const angle = -Math.PI / 2 + i * angleStep;
-                    const x = cx + lr * Math.cos(angle), y = cy + lr * Math.sin(angle);
-                    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-                }
-                ctx.closePath();
-                ctx.strokeStyle = gridColor;
-                ctx.lineWidth = 1;
-                ctx.stroke();
-            }
-
-            for (let i = 0; i < n; i++) {
-                const angle = -Math.PI / 2 + i * angleStep;
-                ctx.beginPath();
-                ctx.moveTo(cx, cy);
-                ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
-                ctx.strokeStyle = gridColor;
-                ctx.stroke();
-                const labelR = r + 25;
-                ctx.fillStyle = textColor;
-                ctx.font = '11px Poppins, sans-serif';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                const lx = cx + labelR * Math.cos(angle), ly = cy + labelR * Math.sin(angle);
-                ctx.fillText(skills[i].name, lx, ly);
-            }
-
-            ctx.beginPath();
-            for (let i = 0; i <= n; i++) {
-                const idx = i % n;
-                const angle = -Math.PI / 2 + i * angleStep;
-                const val = r * (skills[idx].percent / 100);
-                const x = cx + val * Math.cos(angle), y = cy + val * Math.sin(angle);
-                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-            }
-            ctx.closePath();
-            ctx.fillStyle = 'rgba(3, 169, 244, 0.2)';
-            ctx.fill();
-            ctx.strokeStyle = '#03a9f4';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-
-            for (let i = 0; i < n; i++) {
-                const angle = -Math.PI / 2 + i * angleStep;
-                const val = r * (skills[i].percent / 100);
-                const x = cx + val * Math.cos(angle), y = cy + val * Math.sin(angle);
-                ctx.beginPath();
-                ctx.arc(x, y, 5, 0, Math.PI * 2);
-                ctx.fillStyle = '#03a9f4';
-                ctx.fill();
-            }
-
-            const observer = new MutationObserver(() => {
-                if (document.documentElement.getAttribute('data-theme') !== (isDark ? 'dark' : 'light')) {
-                    setTimeout(() => this.drawRadarChart(), 50);
-                }
-            });
-            observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
         },
 
         renderInterests() {

@@ -309,7 +309,7 @@ body {
 @media print {
     body { background: white; padding: 0; animation: none; }
     #particles-canvas, .theme-toggle, .reading-progress,
-    .share-btn, .contact-form-section, .radar-section,
+    .share-btn, .contact-form-section,
     .lang-switch { display: none !important; }
     .cv-container { box-shadow: none; max-width: 100%; }
     .cv-sidebar { background: #f0f0f0 !important; }
