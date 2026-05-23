@@ -5,7 +5,7 @@ const CV = {
         description: 'Currículo de Kaiobrl | full stack developer',
         author: 'Kaiobrl',
         themeColor: '#003147',
-        url: 'https://kaiobrl.github.io/curriculumvitae'
+        url: 'https://kaiobrl.github.io/curriculumvitae/'
     },
     i18n: {
         pt: {
@@ -100,9 +100,9 @@ const CV = {
         status: 'available',
         social: [
             { icon: 'fab fa-github', url: 'https://github.com/Kaiobrl', label: 'GitHub' },
-            { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/Kaiobrl', label: 'LinkedIn' },
+            // { icon: 'fab fa-linkedin', url: 'https://linkedin.com/in/Kaiobrl', label: 'LinkedIn' },
             { icon: 'fas fa-envelope', url: 'mailto:formatolivre1@gmail.com', label: 'Email' },
-            { icon: 'fab fa-whatsapp', url: 'https://wa.me/5583981374944', label: 'WhatsApp' }
+            // { icon: 'fab fa-whatsapp', url: 'https://wa.me/5583981374944', label: 'WhatsApp' }
         ]
     },
     contact: [
@@ -149,7 +149,7 @@ const CV = {
         { icon: 'fab fa-react', title: 'React Essentials', desc: 'Componentes & Hooks', statusKey: 'completed' }
     ],
     projects: [
-        { title: 'Currículo Online', desc: 'Currículo responsivo com dark mode e animações', tech: ['HTML', 'CSS', 'JS'], image: null, url: '#', source: 'https://github.com/Kaiobrl/curriculumvitae' },
+        { title: 'Currículo Online', desc: 'Currículo responsivo com dark mode e animações', tech: ['HTML', 'CSS', 'JS'], image: null, url: '#', source: 'https://kaiobrl.github.io/curriculumvitae/' },
         { title: 'Em Breve', desc: 'Projeto em desenvolvimento', tech: ['React', 'Node'], image: null, url: '#', source: '#' }
     ],
     github: {

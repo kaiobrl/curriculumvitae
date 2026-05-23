@@ -424,7 +424,6 @@
             let menu = document.createElement('div');
             menu.className = 'share-options';
             menu.innerHTML = `
-                <button class="share-option" data-share="whatsapp"><i class="fab fa-whatsapp"></i> ${this.t('shareWhatsApp')}</button>
                 <button class="share-option" data-share="linkedin"><i class="fab fa-linkedin"></i> ${this.t('shareLinkedIn')}</button>
                 <button class="share-option" data-share="email"><i class="fas fa-envelope"></i> ${this.t('shareEmail')}</button>
                 <button class="share-option" data-share="native"><i class="fas fa-share-alt"></i> ${this.t('share')}</button>`;
