@@ -1,8 +1,8 @@
 const CV = {
     lang: 'pt',
     meta: {
-        title: 'Kaiobrl | Desenvolvedor Web',
-        description: 'Currículo de Kaiobrl - Desenvolvedor Web Frontend',
+        title: 'Kaiobrl',
+        description: 'Currículo de Kaiobrl | full stack developer',
         author: 'Kaiobrl',
         themeColor: '#003147',
         url: 'https://kaiobrl.github.io/curriculumvitae'
@@ -23,7 +23,7 @@ const CV = {
             intermediate: 'Intermediário',
             skills: 'Habilidades',
             about: 'Sobre Mim',
-            aboutText: 'Olá! Sou **Kaiobrl**, um desenvolvedor front-end em formação apaixonado por tecnologia. Estou sempre me desafiando com novos projetos e buscando feedback na comunidade de programação, além de compartilhar meus conhecimentos.',
+            aboutText: 'Olá! Sou **Kaiobrl**, full stack developer em formação apaixonado por tecnologia. Estou sempre me desafiando com novos projetos e buscando feedback na comunidade de programação, além de compartilhar meus conhecimentos.',
             experience: 'Experiência Profissional',
             interests: 'Interesses',
             certifications: 'Certificações & Cursos',
@@ -65,7 +65,7 @@ const CV = {
             intermediate: 'Intermediate',
             skills: 'Skills',
             about: 'About Me',
-            aboutText: 'Hello! I\'m **Kaiobrl**, a front-end developer in training passionate about technology. I\'m always challenging myself with new projects and seeking feedback from the programming community.',
+            aboutText: 'Hello! I\'m **Kaiobrl**, full stack developer in training passionate about technology. I\'m always challenging myself with new projects and seeking feedback from the programming community.',
             experience: 'Professional Experience',
             interests: 'Interests',
             certifications: 'Certifications & Courses',
@@ -95,7 +95,7 @@ const CV = {
     },
     profile: {
         name: 'Kaiobrl',
-        title: 'Desenvolvedor Web Front-end',
+        title: 'full stack developer',
         image: './img/perfil.png',
         status: 'available',
         social: [
@@ -125,8 +125,9 @@ const CV = {
         { icon: 'fab fa-js', name: 'JavaScript', percent: 76 },
         { icon: 'fab fa-node-js', name: 'Node.js', percent: 60 },
         { icon: 'fab fa-git-alt', name: 'Git', percent: 60 },
-        { icon: 'fab fa-react', name: 'React', percent: 45 },
-        { icon: 'fab fa-figma', name: 'Figma', percent: 55 }
+        { icon: 'fab fa-react', name: 'React', percent: 60 },
+        { icon: 'fas fa-database', name: 'SQL', percent: 60 },
+        { icon: 'fas fa-server', name: 'Express', percent: 60 }
     ],
     experience: [
         { date: 'Out 2019 - Ago 2024', title: 'A Tradicional Tapioca do Lula', company: 'Geisel, João Pessoa', description: 'Serviços gerais e atendimento ao cliente.' },
